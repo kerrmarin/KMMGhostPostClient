@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5754A0AC1B519A4800AEBCA1 /* KMMGhostPostTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5754A0AB1B519A4800AEBCA1 /* KMMGhostPostTests.m */; };
+		5754A0AE1B519A5700AEBCA1 /* KMMGhostTagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5754A0AD1B519A5700AEBCA1 /* KMMGhostTagTests.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -19,10 +21,9 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		9D24CB71CE110FA93DDFC05F /* Pods_GhostPostClient_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBDB2ED7AEF3C3B60A1FDE2 /* Pods_GhostPostClient_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		A1D4BF397D9B87B86A6369CE /* Pods_GhostPostClient_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4292314D7B69FBB1EE8B928 /* Pods_GhostPostClient_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C03BC837F619CB480790435E /* libPods-GhostPostClient_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EE8A907922D65D1502CA45 /* libPods-GhostPostClient_Tests.a */; };
+		DDB053B2329B75577E9AA2FF /* libPods-GhostPostClient_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 774A27EB3E7ECD999D3D398E /* libPods-GhostPostClient_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,9 @@
 
 /* Begin PBXFileReference section */
 		12B488E3A7A87ED81587BC6A /* Pods-GhostPostClient_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhostPostClient_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GhostPostClient_Tests/Pods-GhostPostClient_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* GhostPostClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GhostPostClient.app; path = GhostPostClient_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5754A0AB1B519A4800AEBCA1 /* KMMGhostPostTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMMGhostPostTests.m; sourceTree = "<group>"; };
+		5754A0AD1B519A5700AEBCA1 /* KMMGhostTagTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMMGhostTagTests.m; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* GhostPostClient_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostPostClient_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -50,19 +53,18 @@
 		6003F5A5195388D20070C39A /* KMMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMMViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* KMMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMMViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = GhostPostClient_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* GhostPostClient_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhostPostClient_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		774A27EB3E7ECD999D3D398E /* libPods-GhostPostClient_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GhostPostClient_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E53E8CF229D535A84D6452B /* GhostPostClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GhostPostClient.podspec; path = ../GhostPostClient.podspec; sourceTree = "<group>"; };
-		7FBDB2ED7AEF3C3B60A1FDE2 /* Pods_GhostPostClient_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhostPostClient_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B7EE8A907922D65D1502CA45 /* libPods-GhostPostClient_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GhostPostClient_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C304B4612724058CAC4B13F2 /* Pods-GhostPostClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhostPostClient_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GhostPostClient_Tests/Pods-GhostPostClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDFDC60D1049F3892CE9548D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D8C54E8AC42EB735D798DF60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E4292314D7B69FBB1EE8B928 /* Pods_GhostPostClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhostPostClient_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6DB2FAFB0933893A3D27B91 /* Pods-GhostPostClient_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhostPostClient_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GhostPostClient_Example/Pods-GhostPostClient_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E90C687A4EA7650DFB483B17 /* Pods-GhostPostClient_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhostPostClient_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-GhostPostClient_Example/Pods-GhostPostClient_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				A1D4BF397D9B87B86A6369CE /* Pods_GhostPostClient_Example.framework in Frameworks */,
+				DDB053B2329B75577E9AA2FF /* libPods-GhostPostClient_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				9D24CB71CE110FA93DDFC05F /* Pods_GhostPostClient_Tests.framework in Frameworks */,
+				C03BC837F619CB480790435E /* libPods-GhostPostClient_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,8 +121,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* GhostPostClient.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				6003F58A195388D20070C39A /* GhostPostClient_Example.app */,
+				6003F5AE195388D20070C39A /* GhostPostClient_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,8 +134,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				E4292314D7B69FBB1EE8B928 /* Pods_GhostPostClient_Example.framework */,
-				7FBDB2ED7AEF3C3B60A1FDE2 /* Pods_GhostPostClient_Tests.framework */,
+				774A27EB3E7ECD999D3D398E /* libPods-GhostPostClient_Example.a */,
+				B7EE8A907922D65D1502CA45 /* libPods-GhostPostClient_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,8 +169,9 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				5754A0AB1B519A4800AEBCA1 /* KMMGhostPostTests.m */,
+				5754A0AD1B519A5700AEBCA1 /* KMMGhostTagTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -204,7 +207,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				064970E03A187CEBBFD6071C /* Embed Pods Frameworks */,
 				ECADCB091464DD433EF348CA /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -213,7 +215,7 @@
 			);
 			name = GhostPostClient_Example;
 			productName = GhostPostClient;
-			productReference = 6003F58A195388D20070C39A /* GhostPostClient.app */;
+			productReference = 6003F58A195388D20070C39A /* GhostPostClient_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* GhostPostClient_Tests */ = {
@@ -224,7 +226,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				5D1B98DFFD6405025CC375DE /* Embed Pods Frameworks */,
 				A5657863B5C12BB24AA5D991 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -234,7 +235,7 @@
 			);
 			name = GhostPostClient_Tests;
 			productName = GhostPostClientTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* GhostPostClient_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -293,21 +294,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		064970E03A187CEBBFD6071C /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GhostPostClient_Example/Pods-GhostPostClient_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4CE91EE217378D38A50BD33A /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,21 +307,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5D1B98DFFD6405025CC375DE /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GhostPostClient_Tests/Pods-GhostPostClient_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A5657863B5C12BB24AA5D991 /* Copy Pods Resources */ = {
@@ -400,7 +371,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				5754A0AE1B519A5700AEBCA1 /* KMMGhostTagTests.m in Sources */,
+				5754A0AC1B519A4800AEBCA1 /* KMMGhostPostTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -499,7 +471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -515,6 +487,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhostPostClient/GhostPostClient-Prefix.pch";
 				INFOPLIST_FILE = "GhostPostClient/GhostPostClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -530,6 +503,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhostPostClient/GhostPostClient-Prefix.pch";
 				INFOPLIST_FILE = "GhostPostClient/GhostPostClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
