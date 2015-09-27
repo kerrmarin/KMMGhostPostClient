@@ -1,9 +1,9 @@
 # GhostPostClient
 
-[![CI Status](http://img.shields.io/travis/Kerr Marin Miller/GhostPostClient.svg?style=flat)](https://travis-ci.org/Kerr Marin Miller/GhostPostClient)
-[![Version](https://img.shields.io/cocoapods/v/GhostPostClient.svg?style=flat)](http://cocoapods.org/pods/GhostPostClient)
-[![License](https://img.shields.io/cocoapods/l/GhostPostClient.svg?style=flat)](http://cocoapods.org/pods/GhostPostClient)
-[![Platform](https://img.shields.io/cocoapods/p/GhostPostClient.svg?style=flat)](http://cocoapods.org/pods/GhostPostClient)
+[![CI Status](http://img.shields.io/travis/kerrmarin/KMMGhostPostClient.svg?style=flat)](https://travis-ci.org/kerrmarin/KMMGhostPostClient)
+[![Version](https://img.shields.io/cocoapods/v/KMMGhostPostClient.svg?style=flat)](http://cocoapods.org/pods/KMMGhostPostClient)
+[![License](https://img.shields.io/cocoapods/l/KMMGhostPostClient.svg?style=flat)](http://cocoapods.org/pods/KMMGhostPostClient)
+[![Platform](https://img.shields.io/cocoapods/p/KMMGhostPostClient.svg?style=flat)](http://cocoapods.org/pods/KMMGhostPostClient)
 
 ## Usage
 
