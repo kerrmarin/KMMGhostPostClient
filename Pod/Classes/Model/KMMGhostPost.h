@@ -4,7 +4,6 @@
 //
 //  Created by Kerr Marin Miller on 11/07/2015.
 //
-//
 
 @import Foundation;
 
@@ -30,10 +29,10 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 /**
  *  Title of your blog post.
  */
-@property(nonatomic, readonly, copy) NSString *title;
+@property(nonatomic, copy) NSString *title;
 
 /**
- *  Automatically generated unique slug that is based on the title of 
+ *  Automatically generated unique slug that is based on the title of
  *  your blog post (e.g.: 'Test Post' will become 'test-post').
  */
 @property(nonatomic, readonly, copy) NSString *slug;
@@ -48,17 +47,12 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 /**
  *  Markdown of your post.
  */
-@property(nonatomic, readonly, copy) NSString *markdown;
+@property(nonatomic, copy) NSString *markdown;
 
 /**
  *  HTML of your post generated from markdown.
  */
 @property(nonatomic, readonly, copy) NSString *html;
-
-/**
- *  Not currently used.
- */
-@property(nonatomic, readonly, copy) NSString *image;
 
 /**
  *  Indicate a featured post. Defaults to false.
@@ -71,22 +65,12 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 @property(nonatomic, readonly, getter=isPage) BOOL page;
 
 /**
- *  Language of the post. Not currently used. Defaults to en_US. 
+ *  Language of the post. Not currently used. Defaults to en_US.
  *  Language codes used as primary subtags are from ISO 639-1.
  *  Country codes used as secondary subtags are from ISO 3166.
  *  Primary and secondary tag are concatenated with an underscore.
  */
 @property(nonatomic, readonly) NSLocale *locale;
-
-/**
- *  Not currently used.
- */
-@property(nonatomic, readonly, copy) NSString *metaTitle;
-
-/**
- *  Not currently used.
- */
-@property(nonatomic, readonly, copy) NSString *metaDescription;
 
 /**
  *  Author of the post. By default the creator is used as initial author.
@@ -116,7 +100,7 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 /**
  *  ISO 8601 date and time when the post was published.
  */
-@property(nonatomic, readonly) NSDate *publishedAt; // ISO 8601
+@property(nullable, nonatomic, readonly) NSDate *publishedAt; // ISO 8601
 
 /**
  *  User who published the post
@@ -129,24 +113,26 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 @property(nonatomic, readonly, copy) NSArray *tags;
 
 
--(instancetype)initWithPostId:(NSInteger)postId
-                     postUUID:(NSString *)postUUID
-                        title:(NSString *)title
-                         slug:(NSString *)slug
-                       status:(KMMGhostPostStatus)status
-                     markdown:(NSString *)markdown
-                         html:(NSString *)html
-                   isFeatured:(BOOL)featured
-                       isPage:(BOOL)page
-                       locale:(NSLocale *)locale
-                     authorId:(NSInteger)authorId
-                    createdAt:(NSDate *)createdAt
-                    createdBy:(NSInteger)createdBy
-                    updatedAt:(NSDate *)updatedAt
-                    updatedBy:(NSInteger)updatedBy
-                  publishedAt:(NSDate *)publishedAt
-                  publishedBy:(NSInteger)publishedBy
-                         tags:(NSArray *)tags;
+- (instancetype)init NS_UNAVAILABLE;
+
+-(nullable instancetype)initWithPostId:(NSInteger)postId
+                              postUUID:(NSString *)postUUID
+                                 title:(NSString *)title
+                                  slug:(NSString *)slug
+                                status:(KMMGhostPostStatus)status
+                              markdown:(NSString *)markdown
+                                  html:(NSString *)html
+                            isFeatured:(BOOL)featured
+                                isPage:(BOOL)page
+                                locale:(NSLocale *)locale
+                              authorId:(NSInteger)authorId
+                             createdAt:(NSDate *)createdAt
+                             createdBy:(NSInteger)createdBy
+                             updatedAt:(NSDate *)updatedAt
+                             updatedBy:(NSInteger)updatedBy
+                           publishedAt:(nullable NSDate *)publishedAt
+                           publishedBy:(NSInteger)publishedBy
+                                  tags:(NSArray *)tags NS_DESIGNATED_INITIALIZER;
 
 @end
 

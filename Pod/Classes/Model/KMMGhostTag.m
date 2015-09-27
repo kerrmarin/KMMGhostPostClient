@@ -10,14 +10,15 @@
 
 @implementation KMMGhostTag
 
--(instancetype)initWithtagId:(NSInteger)tagId
-                    tagUUID:(NSString *)tagUUID
-                       name:(NSString *)name
-                       slug:(NSString *)slug
-                  createdAt:(NSDate *)createdAt
-                  createdBy:(NSInteger)createdBy
-                  updatedAt:(NSDate *)updatedAt
-                  updatedBy:(NSInteger)updatedBy {
+-(nullable instancetype)initWithtagId:(NSInteger)tagId
+                              tagUUID:(NSString *)tagUUID
+                                 name:(NSString *)name
+                                 slug:(NSString *)slug
+                            createdAt:(NSDate *)createdAt
+                            createdBy:(NSInteger)createdBy
+                            updatedAt:(NSDate *)updatedAt
+                            updatedBy:(NSInteger)updatedBy {
+    
     if(self = [super init]) {
         _tagId = tagId;
         _tagUUID = [tagUUID copy];
@@ -28,6 +29,7 @@
         _updatedAt = updatedAt;
         _updatedBy = updatedBy;
     }
+    
     return self;
 }
 @end

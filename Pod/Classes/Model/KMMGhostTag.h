@@ -34,26 +34,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, readonly, copy) NSString *slug;
 
 /**
- *  Not currently used.
- */
-@property(nonatomic, readonly, copy) NSString *tagDescription;
-
-/**
- *  Not currently used.
- */
-@property(nonatomic, readonly) NSInteger parentId;
-
-/**
- *  Not currently used.
- */
-@property(nonatomic, readonly, copy) NSString *metaTitle;
-
-/**
- *  Not currently used.
- */
-@property(nonatomic, readonly, copy) NSString *metaDescription;
-
-/**
  *  The date this tag was created at
  */
 @property(nonatomic, readonly) NSDate *createdAt;
@@ -74,14 +54,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, readonly) NSInteger updatedBy;
 
 
--(instancetype)initWithtagId:(NSInteger)tagId
-                     tagUUID:(NSString *)tagUUID
-                        name:(NSString *)name
-                        slug:(NSString *)slug
-                   createdAt:(NSDate *)createdAt
-                   createdBy:(NSInteger)createdBy
-                   updatedAt:(NSDate *)updatedAt
-                   updatedBy:(NSInteger)updatedBy;
+-(nullable instancetype)initWithtagId:(NSInteger)tagId
+                              tagUUID:(NSString *)tagUUID
+                                 name:(NSString *)name
+                                 slug:(NSString *)slug
+                            createdAt:(NSDate *)createdAt
+                            createdBy:(NSInteger)createdBy
+                            updatedAt:(NSDate *)updatedAt
+                            updatedBy:(NSInteger)updatedBy;
 
 @end
 

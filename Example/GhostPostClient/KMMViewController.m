@@ -7,23 +7,60 @@
 //
 
 #import "KMMViewController.h"
+#import "KMMGhostLoginClient.h"
+#import "KMMGhostLoginJSONSessionManager.h"
+#import "KMMGhostLoginTokenJSONParser.h"
+
+#import "KMMPostsViewController.h"
 
 @interface KMMViewController ()
+
+@property(nonatomic, weak) IBOutlet UIButton *loginButton;
+@property(nonatomic, weak) IBOutlet UITextField *emailTextField;
+@property(nonatomic, weak) IBOutlet UITextField *passwordTextField;
+@property(nonatomic, weak) IBOutlet UITextField *domainTextField;
+@property(nonatomic, weak) IBOutlet UITextView *resultsTextView;
+
+@property(nonatomic) KMMGhostLoginClient *client;
 
 @end
 
 @implementation KMMViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (IBAction)didTapLoginButton:(id)sender {
+    [self.view endEditing:YES];
+    
+    NSString *email = self.emailTextField.text;
+    NSString *password = self.passwordTextField.text;
+    NSString *domain = self.domainTextField.text;
+    
+    NSMutableString *log = [NSMutableString stringWithFormat:@"Logging in with email: %@\nPassword: ****** (%lu characters)\nDomain: %@", email, (unsigned long)password.length, domain];
+    self.resultsTextView.text = log;
+    
+    KMMGhostLoginJSONSessionManager *manager = [[KMMGhostLoginJSONSessionManager alloc] initWithDomainURL: [NSURL URLWithString: domain]];
+    
+    KMMGhostLoginTokenJSONParser *parser = [[KMMGhostLoginTokenJSONParser alloc] init];
+    
+    self.client = [[KMMGhostLoginClient alloc] initWithManager:manager parser:parser];
+    
+    [self.client loginWithUsername:email password:password complete:^(KMMGhostLoginToken *token, NSError* error) {
+        if(error) {
+            [log appendString:[NSString stringWithFormat:@"\nError: %@", error.localizedDescription]];
+        } else {
+            [log appendString:@"\nSuccessfully logged in!"];
+            [self performSegueWithIdentifier:@"loginSuccess" sender:self];
+        }
+        self.resultsTextView.text = log;
+    }];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"loginSuccess"]) {
+        KMMPostsViewController *destination = segue.destinationViewController;
+        destination.blogBaseURL = [NSURL URLWithString:self.domainTextField.text];
+        destination.accessToken = self.client.token.accessToken;
+    }
 }
+
 
 @end

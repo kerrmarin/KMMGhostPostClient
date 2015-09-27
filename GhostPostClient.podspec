@@ -10,21 +10,17 @@
 Pod::Spec.new do |s|
   s.name             = "GhostPostClient"
   s.version          = "0.1.0"
-  s.summary          = "A short description of GhostPostClient."
+  s.summary          = "A client to retrieve and edit posts from a ghost installation"
   s.description      = <<-DESC
-                       An optional longer description of GhostPostClient
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       A client to retrieve and edit posts from a ghost installation
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/GhostPostClient"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/kerrmarin/GhostPostClient"
   s.license          = 'MIT'
   s.author           = { "Kerr Marin Miller" => "kerr@kerrmarin.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/GhostPostClient.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/kerrmarin/GhostPostClient.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/kerrmarin'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
@@ -32,7 +28,5 @@ Pod::Spec.new do |s|
     'GhostPostClient' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'AFNetworking', '~> 2.5.4'
+  s.dependency 'AFNetworking', '~> 2.6.0'
 end

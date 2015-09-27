@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		572B06931BB7020100093FC7 /* KMMGhostPostHTTPJSONClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 572B06921BB7020100093FC7 /* KMMGhostPostHTTPJSONClientTests.m */; settings = {ASSET_TAGS = (); }; };
 		5754A0AC1B519A4800AEBCA1 /* KMMGhostPostTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5754A0AB1B519A4800AEBCA1 /* KMMGhostPostTests.m */; };
 		5754A0AE1B519A5700AEBCA1 /* KMMGhostTagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5754A0AD1B519A5700AEBCA1 /* KMMGhostTagTests.m */; };
+		577780C21BB7361400D2F8EC /* KMMGhostPostJSONParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 577780C11BB7361400D2F8EC /* KMMGhostPostJSONParserTests.m */; settings = {ASSET_TAGS = (); }; };
+		577780C41BB756D500D2F8EC /* KMMGhostTagJSONParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 577780C31BB756D500D2F8EC /* KMMGhostTagJSONParserTests.m */; settings = {ASSET_TAGS = (); }; };
+		577780C71BB7F2BE00D2F8EC /* KMMPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577780C61BB7F2BE00D2F8EC /* KMMPostsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		577780C91BB7F6B400D2F8EC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577780C81BB7F6B400D2F8EC /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		577780CC1BB7F92100D2F8EC /* KMMPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577780CB1BB7F92100D2F8EC /* KMMPostViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -38,8 +44,16 @@
 
 /* Begin PBXFileReference section */
 		12B488E3A7A87ED81587BC6A /* Pods-GhostPostClient_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhostPostClient_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GhostPostClient_Tests/Pods-GhostPostClient_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		572B06921BB7020100093FC7 /* KMMGhostPostHTTPJSONClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMMGhostPostHTTPJSONClientTests.m; sourceTree = "<group>"; };
 		5754A0AB1B519A4800AEBCA1 /* KMMGhostPostTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMMGhostPostTests.m; sourceTree = "<group>"; };
 		5754A0AD1B519A5700AEBCA1 /* KMMGhostTagTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMMGhostTagTests.m; sourceTree = "<group>"; };
+		577780C11BB7361400D2F8EC /* KMMGhostPostJSONParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMMGhostPostJSONParserTests.m; sourceTree = "<group>"; };
+		577780C31BB756D500D2F8EC /* KMMGhostTagJSONParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMMGhostTagJSONParserTests.m; sourceTree = "<group>"; };
+		577780C51BB7F2BE00D2F8EC /* KMMPostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMMPostsViewController.h; sourceTree = "<group>"; };
+		577780C61BB7F2BE00D2F8EC /* KMMPostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMMPostsViewController.m; sourceTree = "<group>"; };
+		577780C81BB7F6B400D2F8EC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		577780CA1BB7F92100D2F8EC /* KMMPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMMPostViewController.h; sourceTree = "<group>"; };
+		577780CB1BB7F92100D2F8EC /* KMMPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMMPostViewController.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* GhostPostClient_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostPostClient_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,8 +160,13 @@
 				6003F59C195388D20070C39A /* KMMAppDelegate.h */,
 				6003F59D195388D20070C39A /* KMMAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				577780C81BB7F6B400D2F8EC /* Launch Screen.storyboard */,
 				6003F5A5195388D20070C39A /* KMMViewController.h */,
 				6003F5A6195388D20070C39A /* KMMViewController.m */,
+				577780C51BB7F2BE00D2F8EC /* KMMPostsViewController.h */,
+				577780C61BB7F2BE00D2F8EC /* KMMPostsViewController.m */,
+				577780CA1BB7F92100D2F8EC /* KMMPostViewController.h */,
+				577780CB1BB7F92100D2F8EC /* KMMPostViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -171,6 +190,9 @@
 			children = (
 				6003F5B6195388D20070C39A /* Supporting Files */,
 				5754A0AB1B519A4800AEBCA1 /* KMMGhostPostTests.m */,
+				577780C11BB7361400D2F8EC /* KMMGhostPostJSONParserTests.m */,
+				577780C31BB756D500D2F8EC /* KMMGhostTagJSONParserTests.m */,
+				572B06921BB7020100093FC7 /* KMMGhostPostHTTPJSONClientTests.m */,
 				5754A0AD1B519A5700AEBCA1 /* KMMGhostTagTests.m */,
 			);
 			path = Tests;
@@ -245,7 +267,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = KMM;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Kerr Marin Miller";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
@@ -279,6 +301,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				577780C91BB7F6B400D2F8EC /* Launch Screen.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +384,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				577780CC1BB7F92100D2F8EC /* KMMPostViewController.m in Sources */,
+				577780C71BB7F2BE00D2F8EC /* KMMPostsViewController.m in Sources */,
 				6003F59E195388D20070C39A /* KMMAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* KMMViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
@@ -372,6 +397,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5754A0AE1B519A5700AEBCA1 /* KMMGhostTagTests.m in Sources */,
+				577780C41BB756D500D2F8EC /* KMMGhostTagJSONParserTests.m in Sources */,
+				572B06931BB7020100093FC7 /* KMMGhostPostHTTPJSONClientTests.m in Sources */,
+				577780C21BB7361400D2F8EC /* KMMGhostPostJSONParserTests.m in Sources */,
 				5754A0AC1B519A4800AEBCA1 /* KMMGhostPostTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +452,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -483,12 +512,12 @@
 			baseConfigurationReference = E6DB2FAFB0933893A3D27B91 /* Pods-GhostPostClient_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhostPostClient/GhostPostClient-Prefix.pch";
 				INFOPLIST_FILE = "GhostPostClient/GhostPostClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -499,12 +528,12 @@
 			baseConfigurationReference = E90C687A4EA7650DFB483B17 /* Pods-GhostPostClient_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhostPostClient/GhostPostClient-Prefix.pch";
 				INFOPLIST_FILE = "GhostPostClient/GhostPostClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -527,6 +556,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GhostPostClient_Example.app/GhostPostClient_Example";
 				WRAPPER_EXTENSION = xctest;
@@ -546,6 +576,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GhostPostClient_Example.app/GhostPostClient_Example";
 				WRAPPER_EXTENSION = xctest;

@@ -10,24 +10,25 @@
 
 @implementation KMMGhostPost
 
--(instancetype)initWithPostId:(NSInteger)postId
-                     postUUID:(NSString *)postUUID
-                        title:(NSString *)title
-                         slug:(NSString *)slug
-                       status:(KMMGhostPostStatus)status
-                     markdown:(NSString *)markdown
-                         html:(NSString *)html
-                   isFeatured:(BOOL)featured
-                       isPage:(BOOL)page
-                       locale:(NSLocale *)locale
-                     authorId:(NSInteger)authorId
-                    createdAt:(NSDate *)createdAt
-                    createdBy:(NSInteger)createdBy
-                    updatedAt:(NSDate *)updatedAt
-                    updatedBy:(NSInteger)updatedBy
-                  publishedAt:(NSDate *)publishedAt
-                  publishedBy:(NSInteger)publishedBy
-                         tags:(NSArray *)tags {
+-(nullable instancetype)initWithPostId:(NSInteger)postId
+                              postUUID:(NSString *)postUUID
+                                 title:(NSString *)title
+                                  slug:(NSString *)slug
+                                status:(KMMGhostPostStatus)status
+                              markdown:(NSString *)markdown
+                                  html:(NSString *)html
+                            isFeatured:(BOOL)featured
+                                isPage:(BOOL)page
+                                locale:(NSLocale *)locale
+                              authorId:(NSInteger)authorId
+                             createdAt:(NSDate *)createdAt
+                             createdBy:(NSInteger)createdBy
+                             updatedAt:(NSDate *)updatedAt
+                             updatedBy:(NSInteger)updatedBy
+                           publishedAt:(NSDate *)publishedAt
+                           publishedBy:(NSInteger)publishedBy
+                                  tags:(NSArray *)tags {
+    
     if(self = [super init]) {
         _postId = postId;
         _postUUID = [postUUID copy];
@@ -48,6 +49,7 @@
         _publishedBy = publishedBy;
         _tags = [tags copy];
     }
+    
     return self;
 }
 

@@ -6,8 +6,7 @@
 //  Copyright (c) 2015 Kerr Marin Miller. All rights reserved.
 //
 
-@import Foundation;
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 #import "KMMGhostPost.h"
 
