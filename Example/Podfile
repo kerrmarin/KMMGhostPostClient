@@ -1,12 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'GhostPostClient_Example', :exclusive => true do
-  pod "GhostPostClient", :path => "../"
+  pod "KMMGhostPostClient", :path => "../"
   pod 'KMMGhostLoginClient', '~> 0.2'
   
 end
 
 target 'GhostPostClient_Tests', :exclusive => true do
-  pod "GhostPostClient", :path => "../"
+  pod "KMMGhostPostClient", :path => "../"
   pod "OCMock"
 end

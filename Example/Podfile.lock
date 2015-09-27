@@ -20,25 +20,25 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - GhostPostClient (0.1.0):
-    - AFNetworking (~> 2.6.0)
   - KMMGhostLoginClient (0.2):
+    - AFNetworking (~> 2.6.0)
+  - KMMGhostPostClient (0.1.1):
     - AFNetworking (~> 2.6.0)
   - OCMock (3.1.5)
 
 DEPENDENCIES:
-  - GhostPostClient (from `../`)
   - KMMGhostLoginClient (~> 0.2)
+  - KMMGhostPostClient (from `../`)
   - OCMock
 
 EXTERNAL SOURCES:
-  GhostPostClient:
+  KMMGhostPostClient:
     :path: ../
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
-  GhostPostClient: a30ea6294c37f86a6222e4fc575ce8e9df923bb0
   KMMGhostLoginClient: f1749d4f92992a7a463e8f1e2b465656b1434065
+  KMMGhostPostClient: fa68b06482245d0277b89f7861e0796e1794398e
   OCMock: 4c2925291f80407c3738dd1db14d21d0cc278864
 
 COCOAPODS: 0.38.2

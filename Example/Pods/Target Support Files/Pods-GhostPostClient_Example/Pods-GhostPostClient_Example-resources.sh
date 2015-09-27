@@ -58,11 +58,9 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${BUILT_PRODUCTS_DIR}/GhostPostClient.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/GhostLoginClient.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${BUILT_PRODUCTS_DIR}/GhostPostClient.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/GhostLoginClient.bundle"
 fi
 
