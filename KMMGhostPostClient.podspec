@@ -8,16 +8,16 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "GhostPostClient"
+  s.name             = "KMMGhostPostClient"
   s.version          = "0.1.0"
   s.summary          = "A client to retrieve and edit posts from a ghost installation"
   s.description      = <<-DESC
                         A client to retrieve, edit, create and delete posts from a ghost installation.
                        DESC
-  s.homepage         = "https://github.com/kerrmarin/GhostPostClient"
+  s.homepage         = "https://github.com/kerrmarin/KMMGhostPostClient"
   s.license          = 'MIT'
   s.author           = { "Kerr Marin Miller" => "kerr@kerrmarin.com" }
-  s.source           = { :git => "https://github.com/kerrmarin/GhostPostClient.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/kerrmarin/KMMGhostPostClient.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/kerrmarin'
 
   s.platform     = :ios, '8.0'

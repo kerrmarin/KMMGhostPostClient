@@ -22,7 +22,7 @@ typedef void (^KMMGhostPostNetworkBlock)(id __nullable results, NSError *__nulla
  *
  *  @return the data task that manages the session for this request
  */
--(NSURLSessionDataTask *)getAllPostsWithBlock:(KMMGhostPostNetworkBlock)complete;
+-(nullable NSURLSessionDataTask *)getAllPostsWithBlock:(KMMGhostPostNetworkBlock)complete;
 
 /**
  *  Creates a new post in the user's blog
@@ -32,7 +32,7 @@ typedef void (^KMMGhostPostNetworkBlock)(id __nullable results, NSError *__nulla
  *
  *  @return the data task that manages the session for this request
  */
--(NSURLSessionDataTask *)createPost:(KMMGhostPost *)post complete:(KMMGhostPostNetworkBlock)complete;
+-(nullable NSURLSessionDataTask *)createPost:(KMMGhostPost *)post complete:(KMMGhostPostNetworkBlock)complete;
 
 /**
  *  Gets a post by ID
@@ -42,7 +42,7 @@ typedef void (^KMMGhostPostNetworkBlock)(id __nullable results, NSError *__nulla
  *
  *  @return the data task that manages the session for this request
  */
--(NSURLSessionDataTask *)getPostWithId:(NSUInteger)postId complete:(KMMGhostPostNetworkBlock)complete;
+-(nullable NSURLSessionDataTask *)getPostWithId:(NSUInteger)postId complete:(KMMGhostPostNetworkBlock)complete;
 
 /**
  *  Updates a post with the given post
@@ -53,7 +53,7 @@ typedef void (^KMMGhostPostNetworkBlock)(id __nullable results, NSError *__nulla
  *
  *  @return the data task that manages the session for this request
  */
--(NSURLSessionDataTask *)updatePost:(KMMGhostPost *)post complete:(KMMGhostPostNetworkBlock)complete;
+-(nullable NSURLSessionDataTask *)updatePost:(KMMGhostPost *)post complete:(KMMGhostPostNetworkBlock)complete;
 
 /**
  *  Deletes the post with the given post ID
@@ -63,7 +63,7 @@ typedef void (^KMMGhostPostNetworkBlock)(id __nullable results, NSError *__nulla
  *
  *  @return the data task that manages the session for this request
  */
--(NSURLSessionDataTask *)deletePostWithId:(NSUInteger)postId complete:(KMMGhostPostNetworkBlock)complete;
+-(nullable NSURLSessionDataTask *)deletePostWithId:(NSUInteger)postId complete:(KMMGhostPostNetworkBlock)complete;
 
 
 @end

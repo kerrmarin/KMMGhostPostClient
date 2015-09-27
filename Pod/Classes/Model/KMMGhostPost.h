@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 /**
  *  id: integer
  */
-@property(nonatomic, readonly) NSInteger postId;
+@property(nonatomic, readonly) NSUInteger postId;
 
 /**
  *  Unique identifier generated automatically as UUIDv4.
@@ -75,7 +75,7 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 /**
  *  Author of the post. By default the creator is used as initial author.
  */
-@property(nonatomic, readonly) NSInteger authorId;
+@property(nonatomic, readonly) NSUInteger authorId;
 
 /**
  *  ISO 8601 date and time when the post was created.
@@ -85,7 +85,7 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 /**
  *  User who created the post.
  */
-@property(nonatomic, readonly) NSInteger createdBy;
+@property(nonatomic, readonly) NSUInteger createdBy;
 
 /**
  *  ISO 8601 date and time when the post was last updated.
@@ -95,7 +95,7 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 /**
  *  User who last updated the post
  */
-@property(nonatomic, readonly) NSInteger updatedBy;
+@property(nonatomic, readonly) NSUInteger updatedBy;
 
 /**
  *  ISO 8601 date and time when the post was published.
@@ -105,7 +105,7 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 /**
  *  User who published the post
  */
-@property(nonatomic, readonly) NSInteger publishedBy;
+@property(nonatomic, readonly) NSUInteger publishedBy;
 
 /**
  *  Tags associated with the post.
@@ -115,7 +115,7 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 
 - (instancetype)init NS_UNAVAILABLE;
 
--(nullable instancetype)initWithPostId:(NSInteger)postId
+-(nullable instancetype)initWithPostId:(NSUInteger)postId
                               postUUID:(NSString *)postUUID
                                  title:(NSString *)title
                                   slug:(NSString *)slug
@@ -125,13 +125,13 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
                             isFeatured:(BOOL)featured
                                 isPage:(BOOL)page
                                 locale:(NSLocale *)locale
-                              authorId:(NSInteger)authorId
+                              authorId:(NSUInteger)authorId
                              createdAt:(NSDate *)createdAt
-                             createdBy:(NSInteger)createdBy
+                             createdBy:(NSUInteger)createdBy
                              updatedAt:(NSDate *)updatedAt
-                             updatedBy:(NSInteger)updatedBy
+                             updatedBy:(NSUInteger)updatedBy
                            publishedAt:(nullable NSDate *)publishedAt
-                           publishedBy:(NSInteger)publishedBy
+                           publishedBy:(NSUInteger)publishedBy
                                   tags:(NSArray *)tags NS_DESIGNATED_INITIALIZER;
 
 @end

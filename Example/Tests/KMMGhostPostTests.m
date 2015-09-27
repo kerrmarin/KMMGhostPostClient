@@ -17,7 +17,7 @@
 @implementation KMMGhostPostTests
 
 -(void)testInitialization {
-    NSInteger postId = 1234;
+    NSUInteger postId = 1234;
     NSString *postUUID = @"asd123";
     NSString *title = @"Test title";
     NSString *slug = @"Test slug";
@@ -27,13 +27,13 @@
     BOOL featured = YES;
     BOOL page = YES;
     NSLocale *locale = [NSLocale localeWithLocaleIdentifier:@"en_US"];
-    NSInteger authorId = 123;
+    NSUInteger authorId = 123;
     NSDate *createdAt = [NSDate dateWithTimeIntervalSince1970:123456];
-    NSInteger createdBy = 12;
+    NSUInteger createdBy = 12;
     NSDate *updatedAt = [NSDate dateWithTimeIntervalSince1970:654321];
-    NSInteger updatedBy = 431;
+    NSUInteger updatedBy = 431;
     NSDate *publishedAt = [NSDate dateWithTimeIntervalSince1970:9999];
-    NSInteger publishedBy = 99;
+    NSUInteger publishedBy = 99;
     NSArray *tags = @[];
     
     KMMGhostPost *post = [[KMMGhostPost alloc] initWithPostId:postId postUUID:postUUID title:title slug:slug status:status markdown:markdown html:html isFeatured:featured isPage:page locale:locale authorId:authorId createdAt:createdAt createdBy:createdBy updatedAt:updatedAt updatedBy:updatedBy publishedAt:publishedAt publishedBy:publishedBy tags:tags];

@@ -35,14 +35,16 @@
     KMMGhostTagJSONParser *parser = [[KMMGhostTagJSONParser alloc] init];
     NSError *error = nil;
     KMMGhostTag *tag = [parser parseTagFromResponse:response error:&error];
+    NSUInteger tagId = 1;
+    NSUInteger author = 1;
     XCTAssertNotNil(tag);
     XCTAssertNil(error);
-    XCTAssertEqual(tag.tagId, 1);
+    XCTAssertEqual(tag.tagId, tagId);
     XCTAssertEqualObjects(tag.tagUUID, @"c912cb47-fe10-4120-aca3-19feb1a931d6");
     XCTAssertEqualObjects(tag.name, @"Getting Started");
     XCTAssertEqualObjects(tag.slug, @"getting-started");
-    XCTAssertEqual(tag.createdBy, 1);
-    XCTAssertEqual(tag.updatedBy, 1);
+    XCTAssertEqual(tag.createdBy, author);
+    XCTAssertEqual(tag.updatedBy, author);
 }
 
 @end

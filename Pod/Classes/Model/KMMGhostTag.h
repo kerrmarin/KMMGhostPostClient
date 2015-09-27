@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  the ID created by the server, increments
  */
-@property(nonatomic, readonly) NSInteger tagId;
+@property(nonatomic, readonly) NSUInteger tagId;
 
 /**
  *  Unique identifier generated automatically as UUIDv4.
@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  the id of the user that created this tag
  */
-@property(nonatomic, readonly) NSInteger createdBy;
+@property(nonatomic, readonly) NSUInteger createdBy;
 
 /**
  *  the date at which this tag was last updated
@@ -51,17 +51,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  the id of the last user to update this tag
  */
-@property(nonatomic, readonly) NSInteger updatedBy;
+@property(nonatomic, readonly) NSUInteger updatedBy;
 
 
--(nullable instancetype)initWithtagId:(NSInteger)tagId
+-(nullable instancetype)initWithtagId:(NSUInteger)tagId
                               tagUUID:(NSString *)tagUUID
                                  name:(NSString *)name
                                  slug:(NSString *)slug
                             createdAt:(NSDate *)createdAt
-                            createdBy:(NSInteger)createdBy
+                            createdBy:(NSUInteger)createdBy
                             updatedAt:(NSDate *)updatedAt
-                            updatedBy:(NSInteger)updatedBy;
+                            updatedBy:(NSUInteger)updatedBy;
 
 @end
 

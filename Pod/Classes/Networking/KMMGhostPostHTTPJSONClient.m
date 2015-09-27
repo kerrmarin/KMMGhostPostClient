@@ -27,6 +27,9 @@ static NSString *KMMGhostPostsURLPath = @"/ghost/api/v0.1/posts";
 }
 
 - (NSURLSessionDataTask *)getAllPostsWithBlock:(KMMGhostPostNetworkBlock)complete {
+    if(!self.accessToken) {
+        return nil;
+    }
     NSURLSessionDataTask *task = [self.manager GET:KMMGhostPostsURLPath
                                         parameters:@{@"status" : @"all",
                                                      @"limit" : @"all",
@@ -40,6 +43,9 @@ static NSString *KMMGhostPostsURLPath = @"/ghost/api/v0.1/posts";
 }
 
 - (NSURLSessionDataTask *)createPost:(KMMGhostPost *)post complete:(KMMGhostPostNetworkBlock)complete {
+    if(!self.accessToken) {
+        return nil;
+    }
     NSDictionary *parameters = @{@"title" : post.title,
                                  @"markdown" : post.markdown,
                                  @"access_token" : self.accessToken};
@@ -54,6 +60,9 @@ static NSString *KMMGhostPostsURLPath = @"/ghost/api/v0.1/posts";
 }
 
 - (NSURLSessionDataTask *)getPostWithId:(NSUInteger)postId complete:(KMMGhostPostNetworkBlock)complete {
+    if(!self.accessToken) {
+        return nil;
+    }
     NSString *path = [KMMGhostPostsURLPath stringByAppendingFormat:@"/%zu", postId];
     NSURLSessionDataTask *task = [self.manager GET:path
                                         parameters:@{@"access_token" : self.accessToken}
@@ -66,6 +75,9 @@ static NSString *KMMGhostPostsURLPath = @"/ghost/api/v0.1/posts";
 }
 
 - (NSURLSessionDataTask *)updatePost:(KMMGhostPost *)post complete:(KMMGhostPostNetworkBlock)complete {
+    if(!self.accessToken) {
+        return nil;
+    }
     NSDictionary *params = @{@"title" : post.title,
                              @"markdown" : post.markdown,
                              @"access_token" : self.accessToken};
@@ -81,7 +93,10 @@ static NSString *KMMGhostPostsURLPath = @"/ghost/api/v0.1/posts";
 }
 
 - (NSURLSessionDataTask *)deletePostWithId:(NSUInteger)postId complete:(KMMGhostPostNetworkBlock)complete {
-    NSString *path = [KMMGhostPostsURLPath stringByAppendingFormat:@"%zu", postId];
+    if(!self.accessToken) {
+        return nil;
+    }
+    NSString *path = [KMMGhostPostsURLPath stringByAppendingFormat:@"/%zu", postId];
     NSURLSessionDataTask *task = [self.manager DELETE:path
                                            parameters:@{@"access_token" : self.accessToken}
                                               success:^(NSURLSessionDataTask *task, id responseObject) {

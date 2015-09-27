@@ -10,7 +10,7 @@
 
 @implementation KMMGhostPost
 
--(nullable instancetype)initWithPostId:(NSInteger)postId
+-(nullable instancetype)initWithPostId:(NSUInteger)postId
                               postUUID:(NSString *)postUUID
                                  title:(NSString *)title
                                   slug:(NSString *)slug
@@ -20,13 +20,13 @@
                             isFeatured:(BOOL)featured
                                 isPage:(BOOL)page
                                 locale:(NSLocale *)locale
-                              authorId:(NSInteger)authorId
+                              authorId:(NSUInteger)authorId
                              createdAt:(NSDate *)createdAt
-                             createdBy:(NSInteger)createdBy
+                             createdBy:(NSUInteger)createdBy
                              updatedAt:(NSDate *)updatedAt
-                             updatedBy:(NSInteger)updatedBy
+                             updatedBy:(NSUInteger)updatedBy
                            publishedAt:(NSDate *)publishedAt
-                           publishedBy:(NSInteger)publishedBy
+                           publishedBy:(NSUInteger)publishedBy
                                   tags:(NSArray *)tags {
     
     if(self = [super init]) {

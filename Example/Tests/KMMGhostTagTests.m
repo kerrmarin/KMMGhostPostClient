@@ -18,14 +18,14 @@
 @implementation KMMGhostTagTests
 
 -(void)testInitialization {
-    NSInteger tagId = 1;
+    NSUInteger tagId = 1;
     NSString *tagUUID = @"asd123";
     NSString *name = @"test name";
     NSString *slug = @"test slug";
     NSDate *createdAt = [NSDate dateWithTimeIntervalSince1970:123456];
-    NSInteger createdBy = 123456;
+    NSUInteger createdBy = 123456;
     NSDate *updatedAt = [NSDate dateWithTimeIntervalSince1970:654321];
-    NSInteger updatedBy = 654321;
+    NSUInteger updatedBy = 654321;
     
     KMMGhostTag *tag = [[KMMGhostTag alloc] initWithtagId:tagId tagUUID:tagUUID name:name slug:slug createdAt:createdAt createdBy:createdBy updatedAt:updatedAt updatedBy:updatedBy];
     
