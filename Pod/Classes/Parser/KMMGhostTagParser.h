@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol KMMGhostTagParser <NSObject>
 
+/*
+ * Parses a response (usually from the network) into a KMMGhostTag object
+ */
 -(nullable KMMGhostTag*)parseTagFromResponse:(id)response error:(NSError**)error;
 
 @end

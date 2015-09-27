@@ -16,51 +16,52 @@ typedef void (^KMMGhostPostNetworkBlock)(id __nullable results, NSError *__nulla
 @protocol KMMGhostPostHTTPClient <NSObject>
 
 /**
- *  <#Description#>
+ *  Gets all posts available for the logged in user
  *
- *  @param complete <#complete description#>
+ *  @param complete the block that will be called on completion of the network request
  *
- *  @return <#return value description#>
+ *  @return the data task that manages the session for this request
  */
 -(NSURLSessionDataTask *)getAllPostsWithBlock:(KMMGhostPostNetworkBlock)complete;
 
 /**
- *  <#Description#>
+ *  Creates a new post in the user's blog
  *
- *  @param post     <#post description#>
- *  @param complete <#complete description#>
+ *  @param post     the post to be created
+ *  @param complete  the block that will be called on completion of the network request
  *
- *  @return <#return value description#>
+ *  @return the data task that manages the session for this request
  */
 -(NSURLSessionDataTask *)createPost:(KMMGhostPost *)post complete:(KMMGhostPostNetworkBlock)complete;
 
 /**
- *  <#Description#>
+ *  Gets a post by ID
  *
- *  @param postId   <#postId description#>
- *  @param complete <#complete description#>
+ *  @param postId   the id of the post to be retrieved
+ *  @param complete  the block that will be called on completion of the network request
  *
- *  @return <#return value description#>
+ *  @return the data task that manages the session for this request
  */
 -(NSURLSessionDataTask *)getPostWithId:(NSUInteger)postId complete:(KMMGhostPostNetworkBlock)complete;
 
 /**
- *  <#Description#>
+ *  Updates a post with the given post
  *
- *  @param postId   <#postId description#>
- *  @param complete <#complete description#>
+ *  @param post      the post that will be updated. This post's ID is used in the URL and the contents of the post object
+ *                   are then used to update the fields of the post.
+ *  @param complete  the block that will be called on completion of the network request
  *
- *  @return <#return value description#>
+ *  @return the data task that manages the session for this request
  */
 -(NSURLSessionDataTask *)updatePost:(KMMGhostPost *)post complete:(KMMGhostPostNetworkBlock)complete;
 
 /**
- *  <#Description#>
+ *  Deletes the post with the given post ID
  *
- *  @param postId   <#postId description#>
- *  @param complete <#complete description#>
+ *  @param postId   the ID of the post to be deleted
+ *  @param complete  the block that will be called on completion of the network request
  *
- *  @return <#return value description#>
+ *  @return the data task that manages the session for this request
  */
 -(NSURLSessionDataTask *)deletePostWithId:(NSUInteger)postId complete:(KMMGhostPostNetworkBlock)complete;
 

@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol KMMGhostPostParser <NSObject>
 
+/*
+ * Parses a response (usually from the network) into a KMMGHostPost object
+ */
 -(nullable KMMGhostPost*)parsePostFromResponse:(id)response error:(NSError**)error;
 
 @end

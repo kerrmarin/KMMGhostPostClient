@@ -25,8 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.client = [KMMGhostPostClient defaultClient];
-    [self.client initializeWithUrl:self.blogBaseURL];
-    [self.client setAccessToken:self.accessToken];
+    [self.client initializeWithUrl:self.blogBaseURL accessToken:self.accessToken];
     [self.client getAllPostsWithBlock:^(NSArray * _Nullable results, NSError * _Nullable error) {
         self.posts = results;
         [self.tableView reloadData];

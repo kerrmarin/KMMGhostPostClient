@@ -36,9 +36,10 @@
     return self;
 }
 
-- (void)initializeWithUrl:(NSURL *)url {
+- (void)initializeWithUrl:(NSURL *)url accessToken:(NSString *)accessToken{
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url sessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     self.client = [[KMMGhostPostHTTPJSONClient alloc] initWithSessionManager:manager];
+    self.client.accessToken = accessToken;
 }
 
 - (void)setAccessToken:(NSString *)accessToken {

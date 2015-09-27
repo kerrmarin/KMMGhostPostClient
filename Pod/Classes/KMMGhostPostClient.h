@@ -14,10 +14,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KMMGhostPostClient : NSObject
 
+/**
+ * Gets the default client
+ */
 + (instancetype)defaultClient;
 
-- (void)initializeWithUrl:(NSURL*)url;
+/*
+ * Initializes the internal client with a given base URL and access token
+ */
+- (void)initializeWithUrl:(NSURL*)url accessToken:(NSString *)accessToken;
 
+/*
+ * Sets the access token. This is usually used for refreshing the token when it has expired.
+ */
 - (void)setAccessToken:(NSString *)accessToken;
 
 /**
@@ -26,45 +35,43 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)getAllPostsWithBlock:(void (^)(NSArray * __nullable results, NSError *__nullable error))complete;
 
 /**
- *  <#Description#>
+ *  Creates a new post whose author is the current logged in user
  *
- *  @param post     <#post description#>
- *  @param complete <#complete description#>
+ *  @param post     The post object that should be created
+ *  @param complete A block that will be called when a response is received
  *
- *  @return <#return value description#>
  */
 - (void)createPost:(KMMGhostPost *)post complete:(void (^)(BOOL success, NSError *__nullable error))complete;
 
 /**
- *  <#Description#>
+ *  Gets a post based on that post's ID
  *
- *  @param postId   <#postId description#>
- *  @param complete <#complete description#>
+ *  @param postId   the ID of the post to retrieve
+ *  @param complete a block that will be called when the response is received. 
+ *   If a post was found, it will be passed in this block.
  *
- *  @return <#return value description#>
  */
 - (void)getPostWithId:(NSUInteger)postId complete:(void (^)(KMMGhostPost * __nullable post, NSError *__nullable error))complete;
 
 /**
- *  <#Description#>
+ *  Updates a post with a given post
  *
- *  @param postId   <#postId description#>
- *  @param complete <#complete description#>
+ *  @param post the post to update. This will update the post based on the
+ *   post ID and replace all properties with those of the given post.
+ *  @param complete the block called when a response is received. 
+ *    success will be YES if the update was successful.
  *
- *  @return <#return value description#>
  */
 - (void)updatePost:(KMMGhostPost *)post complete:(void (^)(BOOL success, NSError *__nullable error))complete;
 
 /**
- *  <#Description#>
+ *  Deletes a post based on the given ID.
  *
- *  @param postId   <#postId description#>
- *  @param complete <#complete description#>
+ *  @param postId   the ID of the post to delete
+ *  @param complete a block called when a response is received.
  *
- *  @return <#return value description#>
  */
 - (void)deletePostWithId:(NSUInteger)postId complete:(void (^)(BOOL success, NSError *__nullable error))complete;
-
 
 @end
 
