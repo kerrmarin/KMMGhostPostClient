@@ -132,7 +132,10 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
                              updatedBy:(NSUInteger)updatedBy
                            publishedAt:(nullable NSDate *)publishedAt
                            publishedBy:(NSUInteger)publishedBy
-                                  tags:(NSArray *)tags NS_DESIGNATED_INITIALIZER;
+                                  tags:(NSArray *)tags;
+
+- (instancetype)initWithTitle:(NSString *)title
+                     markdown:(NSString *)markdown;
 
 @end
 

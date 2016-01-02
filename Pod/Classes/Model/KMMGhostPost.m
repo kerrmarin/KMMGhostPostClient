@@ -53,4 +53,12 @@
     return self;
 }
 
+- (instancetype)initWithTitle:(NSString *)title markdown:(NSString *)markdown {
+    if(self = [super init]) {
+        _title = [title copy];
+        _markdown = [markdown copy];
+    }
+    return self;
+}
+
 @end
