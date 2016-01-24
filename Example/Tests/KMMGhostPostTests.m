@@ -35,8 +35,9 @@
     NSDate *publishedAt = [NSDate dateWithTimeIntervalSince1970:9999];
     NSUInteger publishedBy = 99;
     NSArray *tags = @[];
+    NSString *imagePath = @"/my/path/to/this/image.jpg";
     
-    KMMGhostPost *post = [[KMMGhostPost alloc] initWithPostId:postId postUUID:postUUID title:title slug:slug status:status markdown:markdown html:html isFeatured:featured isPage:page locale:locale authorId:authorId createdAt:createdAt createdBy:createdBy updatedAt:updatedAt updatedBy:updatedBy publishedAt:publishedAt publishedBy:publishedBy tags:tags];
+    KMMGhostPost *post = [[KMMGhostPost alloc] initWithPostId:postId postUUID:postUUID title:title slug:slug status:status markdown:markdown html:html isFeatured:featured isPage:page locale:locale authorId:authorId createdAt:createdAt createdBy:createdBy updatedAt:updatedAt updatedBy:updatedBy publishedAt:publishedAt publishedBy:publishedBy tags:tags imagePath:imagePath];
     
     XCTAssertEqual(postId, post.postId);
     XCTAssertEqual(status, post.status);
@@ -56,6 +57,7 @@
     XCTAssertEqualObjects(createdAt, post.createdAt);
     XCTAssertEqualObjects(updatedAt, post.updatedAt);
     XCTAssertEqualObjects(publishedAt, post.publishedAt);
+    XCTAssertEqualObjects(imagePath, post.imagePath);
 }
 
 @end

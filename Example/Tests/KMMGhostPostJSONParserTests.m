@@ -18,6 +18,51 @@
 
 @implementation KMMGhostPostJSONParserTests
 
+- (void)testParsingPostWithImage_ShouldParseImagePath {
+    KMMGhostPostJSONParser *parser = [[KMMGhostPostJSONParser alloc] init];
+    NSUInteger postId = 2;
+    NSUInteger author = 1;
+    NSDictionary *response =@{@"id":@(postId),
+                              @"uuid":@"a29cab75-4379-4e0c-96c4-bd302d6026e6",
+                              @"title":@"Ghost on an EC2 instance - Part 2",
+                              @"slug":@"ghost-on-an-ec2-instance-part-2",
+                              @"markdown":@"",
+                              @"html":@"",
+                              @"image":@"/my/path/image.jpg",
+                              @"featured":@NO,
+                              @"page":@NO,
+                              @"status":@"draft",
+                              @"language":@"en_US",
+                              @"meta_title":[NSNull null],
+                              @"meta_description":[NSNull null],
+                              @"created_at":@"2015-07-06T22:21:04.383Z",
+                              @"created_by":@(author),
+                              @"updated_at":@"2015-07-06T22:21:14.720Z",
+                              @"updated_by":@(author),
+                              @"published_at":[NSNull null],
+                              @"published_by":[NSNull null],
+                              @"author":@(author),
+                              @"url":@"/ghost-on-an-ec2-instance-part-2/"};
+    NSError *error = nil;
+    KMMGhostPost *post = [parser parsePostFromResponse:response error:&error];
+    XCTAssertEqualObjects(post.postUUID, @"a29cab75-4379-4e0c-96c4-bd302d6026e6");
+    XCTAssertEqualObjects(post.slug, @"ghost-on-an-ec2-instance-part-2");
+    XCTAssertEqualObjects(post.title, @"Ghost on an EC2 instance - Part 2");
+    XCTAssertEqualObjects(post.markdown, @"");
+    XCTAssertEqualObjects(post.html, @"");
+    XCTAssertEqual(post.featured, NO);
+    XCTAssertEqual(post.page, NO);
+    XCTAssertEqual(post.status, KMMGhostPostStatusDraft);
+    XCTAssertEqualObjects(post.locale.localeIdentifier, @"en_US");
+    XCTAssertEqual(post.createdBy, author);
+    XCTAssertEqual(post.updatedBy, author);
+    XCTAssertEqual(post.authorId, author);
+    XCTAssertNil(post.publishedAt);
+    XCTAssertEqualObjects(post.imagePath, @"/my/path/image.jpg");
+    XCTAssertNil(error);
+    XCTAssertNotNil(post);
+}
+
 - (void)testParsingDraftPost {
     KMMGhostPostJSONParser *parser = [[KMMGhostPostJSONParser alloc] init];
     NSUInteger postId = 2;

@@ -113,6 +113,8 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
 @property(nonatomic, readonly, copy) NSArray *tags;
 
 
+@property(nonatomic, readonly, copy) NSString *imagePath;
+
 - (instancetype)init NS_UNAVAILABLE;
 
 -(nullable instancetype)initWithPostId:(NSUInteger)postId
@@ -132,7 +134,8 @@ typedef NS_ENUM(NSInteger, KMMGhostPostStatus) {
                              updatedBy:(NSUInteger)updatedBy
                            publishedAt:(nullable NSDate *)publishedAt
                            publishedBy:(NSUInteger)publishedBy
-                                  tags:(NSArray *)tags;
+                                  tags:(NSArray *)tags
+                             imagePath:(nullable NSString *)imagePath;
 
 - (instancetype)initWithTitle:(NSString *)title
                      markdown:(NSString *)markdown;

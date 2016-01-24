@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "KMMGhostPostClient"
-  s.version          = "0.2"
+  s.version          = "0.3.0"
   s.summary          = "A client to retrieve and edit posts from a ghost installation"
   s.description      = <<-DESC
                         A client to retrieve, edit, create and delete posts from a ghost installation.

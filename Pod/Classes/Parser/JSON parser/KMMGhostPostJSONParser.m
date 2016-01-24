@@ -38,6 +38,7 @@ static NSUInteger KMMGhostPostParserErrorInvalidObjectCode = 100;
     NSString *slug = response[@"slug"];
     NSString *markdown = response[@"markdown"];
     NSString *html = response[@"html"];
+    NSString *imagePath = response[@"image"];
     BOOL featured = [response[@"featured"] boolValue];
     BOOL page = [response[@"featured"] boolValue];
     NSString *localeIdentifier = response[@"language"];
@@ -77,6 +78,14 @@ static NSUInteger KMMGhostPostParserErrorInvalidObjectCode = 100;
         return nil;
     }
     
+    if ([imagePath isKindOfClass:[NSNull class]]) {
+        imagePath = nil;
+    }
+    
+    if (imagePath && ![imagePath isKindOfClass:[NSString class]]) {
+        return nil;
+    }
+    
     NSUInteger postId = [postIdNumber unsignedIntegerValue];
     NSUInteger author = [authorNumber unsignedIntegerValue];
     NSUInteger createdBy = [createdByNumber unsignedIntegerValue];
@@ -110,7 +119,8 @@ static NSUInteger KMMGhostPostParserErrorInvalidObjectCode = 100;
                                                     updatedBy:updatedBy
                                                   publishedAt:publishedAtDate
                                                   publishedBy:publishedBy
-                                                         tags:tags];
+                                                         tags:tags
+                                                    imagePath:imagePath];
 
     return post;
 }

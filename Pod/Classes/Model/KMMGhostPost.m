@@ -27,7 +27,8 @@
                              updatedBy:(NSUInteger)updatedBy
                            publishedAt:(NSDate *)publishedAt
                            publishedBy:(NSUInteger)publishedBy
-                                  tags:(NSArray *)tags {
+                                  tags:(NSArray *)tags
+                             imagePath:(nullable NSString *)imagePath {
     
     if(self = [super init]) {
         _postId = postId;
@@ -48,6 +49,7 @@
         _publishedAt = publishedAt;
         _publishedBy = publishedBy;
         _tags = [tags copy];
+        _imagePath = [imagePath copy];
     }
     
     return self;
