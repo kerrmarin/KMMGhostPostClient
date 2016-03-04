@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/KMMGhostPostClient.svg?style=flat)](http://cocoapods.org/pods/KMMGhostPostClient)
 [![Platform](https://img.shields.io/cocoapods/p/KMMGhostPostClient.svg?style=flat)](http://cocoapods.org/pods/KMMGhostPostClient)
 
+###Warning
+This pod only works with versions < 7.0 of Ghost. Once the public write API comes out I'll look at updating this to support that.
+
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
